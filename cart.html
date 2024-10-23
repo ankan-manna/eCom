@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #2874f0;
+            padding: 10px 5%;
+            color: white;
+        }
+
+        h1 { margin-bottom: 20px; }
+
+        .cart-container {
+            padding: 20px 5%;
+        }
+
+        .cart-item {
+            display: flex;
+            border-bottom: 1px solid #ddd;
+            padding: 15px 0;
+        }
+
+        .cart-item img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-right: 15px;
+        }
+
+        .item-details {
+            flex-grow: 1;
+        }
+
+        .item-actions {
+            display: flex;
+            align-items: center;
+        }
+
+        .quantity {
+            display: flex;
+            align-items: center;
+            margin-right: 15px;
+        }
+
+        .quantity button {
+            width: 30px;
+            height: 30px;
+            background-color: #f0f0f0;
+            border: none;
+            cursor: pointer;
+        }
+
+        .quantity span {
+            margin: 0 10px;
+        }
+
+        .remove-btn {
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .cart-summary {
+            margin-top: 20px;
+            text-align: right;
+        }
+
+        .checkout-btn {
+            background-color: #fb641b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+  
+    <header>
+        <h1>My Cart</h1>
+    </header>
+
+    <main class="cart-container">
+        <div id="cartItems">
+            <!-- Cart items will be dynamically inserted here -->
+        </div>
+        <div class="cart-summary">
+            <h2>Total: $<span id="cartTotal">0.00</span></h2>
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </main>
+
+    <script src="cart.js"></script>
+</body>
+</html>
